@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Mi Corazon❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#fff5f7,
+#ffe4ec,
+#fff0f5,
+#fde2e4
+);
+
+background-size:400% 400%;
+animation:fondo 18s ease infinite;
+
+overflow-x:hidden;
+
+color:#555;
+}
+
+@keyframes fondo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* CORAZONES */
+
+.corazon{
+position:fixed;
+bottom:-100px;
+font-size:28px;
+color:#ff78a6;
+opacity:.35;
+pointer-events:none;
+z-index:-1;
+}
+
+@keyframes subir{
+from{
+transform:translateY(0) rotate(0deg);
+}
+
+to{
+transform:translateY(-120vh) rotate(360deg);
+}
+}
+
+/* MENU */
+
+nav{
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(15px);
+
+padding:15px 35px;
+
+border-radius:50px;
+
+border:4px solid #ffc4d8;
+
+box-shadow:
+0 10px 25px rgba(216,90,127,.10);
+
+z-index:1000;
+}
+
+nav a{
+
+text-decoration:none;
+
+margin:0 14px;
+
+font-weight:600;
+
+color:#d85a7f;
+
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4f82;
+}
+
+/* SECCIONES */
+
+section{
+padding:110px 25px;
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+}
+
+/* CAJAS */
+
+.hero-card,
+.caja{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:60px;
+
+background:rgba(255,255,255,.88);
+
+backdrop-filter:blur(10px);
+
+border-radius:35px;
+
+border:5px solid #f7a8c4;
+
+box-shadow:
+0 0 0 8px #fff5f7,
+0 15px 35px rgba(216,90,127,.12);
+}
+
+/* TITULOS */
+
+h1,
+h2{
+
+font-family:'Playfair Display',serif;
+
+text-align:center;
+
+color:#d85a7f;
+}
+
+h1{
+
+font-size:4.5rem;
+
+margin-bottom:20px;
+}
+
+h2{
+
+font-size:2.8rem;
+
+margin-bottom:30px;
+}
+
+h2::after{
+
+content:" 💕 ";
+
+display:block;
+
+font-size:1rem;
+
+margin-top:8px;
+}
+
+.sub{
+
+text-align:center;
+
+line-height:1.9;
+
+font-size:1.1rem;
+}
+
+/* FOTO PORTADA */
+.foto-principal{
+
+height:500px;
+
+margin-top:35px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+border:5px solid #f7a8c4;
+
+box-shadow:
+0 10px 25px rgba(216,90,127,.15);
+
+background:white;
+}
+
+
+/* CARTA */
+.carta{
+
+background:white;
+
+padding:60px;
+
+min-height:500px;
+
+border-radius:25px;
+
+border:5px solid #f7a8c4;
+
+line-height:2.2;
+
+font-size:1.08rem;
+
+box-shadow:
+0 10px 25px rgba(216,90,127,.10),
+0 0 0 6px #fff5f7;
+}
+
+
+.firma{
+
+margin-top:30px;
+
+text-align:right;
+
+font-size:1.2rem;
+
+font-weight:bold;
+
+color:#d85a7f;
+}
+
+/* GALERIA */
+
+.galeria{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+}
+
+.polaroid{
+
+background:white;
+
+padding:15px 15px 40px;
+
+border-radius:15px;
+
+border:4px solid #f7a8c4;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+}
+
+.polaroid:nth-child(odd){
+transform:rotate(-2deg);
+}
+
+.polaroid:nth-child(even){
+transform:rotate(2deg);
+}
+
+.polaroid:hover{
+transform:scale(1.04);
+}
+
+.img{
+
+height:260px;
+
+border-radius:10px;
+
+background:#ffe4ec;
+
+border:3px dashed #d85a7f;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#d85a7f;
+
+font-weight:bold;
+}
+
+/* TARJETAS */
+
+.tarjetas{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+}
+
+.tarjeta{
+
+background:#fff8fb;
+
+padding:30px;
+
+border-radius:22px;
+
+border:4px solid #f7a8c4;
+
+text-align:center;
+
+box-shadow:
+0 8px 20px rgba(216,90,127,.08);
+}
+
+.tarjeta h3{
+
+font-size:2rem;
+
+margin-bottom:10px;
+}
+
+/* MENSAJES */
+
+.mensaje-box{
+
+background:#fff8fb;
+
+padding:30px;
+
+border-radius:22px;
+
+border:4px solid #f7a8c4;
+
+min-height:140px;
+
+margin-bottom:20px;
+
+box-shadow:
+0 8px 20px rgba(216,90,127,.08);
+}
+
+/* DECORACION */
+
+.decoracion{
+
+text-align:center;
+
+font-size:1.5rem;
+
+margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+
+padding:60px;
+
+text-align:center;
+
+color:#d85a7f;
+
+font-weight:600;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- CORAZONES -->
+
+<div class="corazon" style="left:10%;animation:subir 10s linear infinite;">💗</div>
+<div class="corazon" style="left:25%;animation:subir 12s linear infinite;">💕</div>
+<div class="corazon" style="left:40%;animation:subir 9s linear infinite;">💖</div>
+<div class="corazon" style="left:60%;animation:subir 11s linear infinite;">💗</div>
+<div class="corazon" style="left:80%;animation:subir 13s linear infinite;">💕</div>
+
+<!-- MENU -->
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#carta">Carta</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#gusta">Me gusta</a>
+    <a href="#decirte">Decirte</a>
+</nav>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-card">
+
+<h1>Para Mi Corazón ❤️</h1>
+
+<p class="sub">
+Hice esta página porque quería hacer algo bonito para ti.
+No soy experta haciendo páginas web,
+pero me gustó la idea espero te guste tambien la hice para explicarte todo. 
+</p>
+
+<div class="decoracion">
+ 💕❤️💕
+</div>
+<div class="foto-principal">
+
+<img
+src="https://i.pinimg.com/736x/74/d1/a4/74d1a49e8a85ac9f1ffc58a6fddd767d.jpg"
+
+alt="Foto principal"
+
+style="
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+">
+
+</div>
+
+   
+
+</section>
+
+<!-- CARTA -->
+
+<section id="carta">
+
+<div class="caja">
+
+<h2>💌 Una Carta Para Ti :p</h2>
+
+<div class="carta">
+
+Holiii como estás C: desde cuándo quería hacerte un regalo como este pero se me retrasaba siempre con la escuela y todo eso espero te guste también el motivo JEJDJE de que te deje de hablar fue eso por el regalo le quería meter algo de drama de misterio pero se me fue de las manos te lastime con falsas promesas perdoname no medi eso espero me puedas perdonar la verdad yo la quería hacer más elaborada pero ya me estaba tardando JAHDJAJD también quiero decirte que te amo muchísisisiisisiisisiisissimo me enamoré de ti no de tu físico bueno quizás si pero más esencial me enamoré de tu forma de de hablar, de pensar, de mirar de como ves cada cosa de otro modo de tu mente me enamoré completamente de ti talvez no puedo darte un amor perfecto pero si uno verdadero yo nosé expresar mis sentimientos pero escribíria miles de cartas que lleven tu nombre te quiero demasiado de verdad, tanto que las palabras sobran nunca me cansaré de decirlo te amo Joshua en ti encontré el amor y calma que tanto necesitaba gracias por ser tu por amarme por como soy yo no soy perfecta pero daría lo mejor de mi por ti nosé como describir lo tanto que siento por ti un simple te amo no se me hace suficiente prometo hacerte la persona más feliz yo nosé amar con palabras yo sé amar con el alma <3.
+</div>
+
+Te amo ❤️
+
+</div>
+
+<div class="firma">
+Con cariño ❤️<br>
+Vale
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="fotos">
+
+<div class="caja">
+
+<h2>📸 Fotos JEJJEEJ</h2>
+<p class="texto-recuerdos">
+Algunas imagenes que me recuerda a nosotros dos ❤️ y mias porque ya ves que me pedias y no te las daba y una mia de bebe JASHJA💔
+</p>
+"
+
+<div class="galeria">
+
+<div class="polaroid">
+<img
+src="https://i.pinimg.com/736x/6a/5c/7d/6a5c7ddb497e3dad75e8d65d37b6c4b5.jpg"
+alt="Foto"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+">
+
+</div>
+
+
+<div class="polaroid">
+<img
+src="https://i.pinimg.com/736x/5c/53/d2/5c53d22c056734e2c5821e5d10aa7dd9.jpg"
+alt="Gatitos"
+style="
+width:100%;
+height:300px;
+object-fit:contain;
+border-radius:10px;
+">
+
+</div>
+
+<div class="polaroid">
+
+<img
+src="https://i.pinimg.com/736x/8d/e2/5b/8de25b03449d4298a0872495f8ccf927.jpg"
+alt="Gatitos2"
+style="
+width:100%;
+height:auto;
+border-radius:10px;
+display:block;
+">
+
+</div>
+
+<div class="polaroid">
+
+  <img src="yo1.jpg" alt="Foto yo1"
+  style="
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    display:block;
+  ">
+
+</div>
+
+<div class="polaroid">
+
+  <img src="yo2.jpg" alt="Foto yo2"
+  style="
+    width:100%;
+    height:autopx;
+    border-radius:10px;
+    display:block;
+  ">
+
+</div>
+
+<div class="polaroid">
+
+ <img src="YO3.jpg" alt="Foto YO3"
+  style="
+    width:100%;
+    height:autopx;
+    border-radius:10px;
+    display:block;
+">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LO QUE ME GUSTA -->
+
+<section id="gusta">
+
+<div class="caja">
+
+<h2>🌸 Lo Que Me Gusta De Ti <3 </h2>
+
+<h3></h3>
+<p>
+Tu sonrisa  
+Tu risa  
+Tu cariño  
+Tu manera de tratarme  
+Tus ojos  
+Tus pestañas  
+Tu forma de ser  
+Tus chistes  
+Tu forma de amar  
+Tu personalidad  
+Tu cariño  
+Tu positividad  
+Tus gustos  
+Tu cara  
+Tu carácter  
+Tu forma de pensar  
+Me quieres tal y como soy  
+Lo sensible que eres  
+Tu niño interior  
+Tu forma de escucharme  
+Tu cara  
+Tu alegría  
+Tu seguridad  
+Tu perspectiva de todo  
+Tu apoyo  
+Tu sencillez  
+Tu cariño inmenso  
+Tu forma de decir te amo
+Tu carisma  
+Tu calma  
+La forma en que me aconsejas  
+Tus audios
+La manera en que me haces sentir  
+Tu cabello  
+Tu tristeza
+Tu corazón  
+Tu atención  
+Tu orgullo  
+Tu fortaleza  
+Tu manera de hablar  
+Tu manera de escuchar  
+Tu energía  
+La forma única que eres  
+Todo de ti  
+Lo lindo que estás  
+Cómo me haces reír  
+Cómo me haces amarte  
+Tu amor x2  
+Cómo me entiendes  
+Tus locuras  
+Tus defectos  
+Tus cualidades  
+Tus valores  
+Tu forma de hacerme reir  
+Tu paz  
+Tu energía  
+Lo mucho que amas a las personas  
+Tu forma de amar  
+Lo mucho que te esfuerzas  
+Tu amor por tu mamá  
+Tu ternura  
+Tus manos  
+Tu optimismo
+  </p>
+</div>
+
+</div>
+
+</div>
+<div class="carta">
+Tu brillo  
+Tu alma  
+Tu resistencia  
+Tu toque a la vida  
+Lo positivo que eres  
+Siempre muestras quién eres  
+Tu transparencia   
+Tu lado cariñoso  
+Tus "Te amo"  
+Tus buenos días  
+Tus "te quiero"  
+Tu dedicación a lo que te gusta  
+El día que nos vimos por primera vez  
+Nuestra conexión  
+Me comprendes  
+Me escuchas  
+Tus locuras  
+Tu orgullo  
+Tu sarcasmo  
+Tus palabras  
+Tus gustos  
+Tu estilo  
+Te extraño  
+Tu valentía  
+Junto a ti es todo mejor  
+Tus apodos hacia mí   
+Tu paciencia  
+Tus expresiones  
+La forma que soy cuando hablo contigo  
+Tu amor a mí  
+La forma en que expresas tus sentimientos  
+ TODO DE TI AMO ❤️❤️❤️
+
+Son tantas cosas que me gustan de ti perdoname por todo enserio eres simplemente perfecto ante mis ojos te quiero de la forma más linda y sincera que no hace falta verte ni tocarte para que mi amor aumente solo basta con cerrar los ojos y pensar que existes ❤️
+
+En tus ojos encuentro un universo infinito donde mis sueños y anhelos se vuelven bendito.
+ Tu risa es el eco que alegra mi ser y en tus brazos encuentro el amanecer 💕.
+
+</div>
+
+</section>
+
+<!-- COSAS QUE QUIERO DECIRTE -->
+
+<section id="decirte">
+
+<div class="caja">
+
+<h2>✨ Algunas Cosas Que Quiero Decirte</h2>
+<div class="carta">
+
+Toda decisión que tomes está bien puedes decidir por los dos te lo mereces por como e sido mala contigo eres un niño muy lindo y muy muchísimo valioso tu corazón vale oro tu vales más que el oro no se que hice para conocerte, conocerte fue lo mejor que pude experimentar en está escuela toda jodida 💜 gracias por compartir un rato de tu vida conmigo también quiero darte toda la suerte del mundo hasta mi suerte aunque no la necesitas yo sé que conseguiras todas tús metas en tu examen se que tú puedes con todo alchile nosé si ya hiciste el examen no me acuerdo cuando se hacían JAHFJSKJDD eres el mejor no olvides que eres muy inteligente estoy segurisima que quédaras en tu escuela soñada todo el esfuerzo que hiciste valdrá la pena estoy orgullosa de ti no te rindas nunca estare aquí para apoyarte siempre yo creo y confío que vas poder con todos tus sueños tqm ❤️
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- MENSAJE FINAL -->
+
+<section>
+
+<div class="caja">
+<div class="carta">
+
+Se que lo que hice no estuvo bien espero puedas perdonarme💔
+Quiero aquí disculparme por todo el daño que te eh echo durante este tiempo perdoname por mis acciones solo no pensaba en las consecuencias me duele haberte echo este daño si no quieres perdonarme está bien entiendo todo lo que pasaste lo que pensabas fueron acciones muy inmaduras desearía volver en tiempo y no averte hecho esto perdoname no fui lo mejor para ti me disculpo por mis palabras no puedo borrar lo que te hice pero estoy dispuesta a hacer todo lo posible para remediarlo y te e hecho dudar de mi amor por ti quiero que sepas que te amo espero poder recuperar tu confianza y tú amor quiero ser mejor para ti ❤️.No puedo ignorar el dolor que he causado y la decepción que te he hecho sentir te escribí para demostrarte mi sincero arrepentimiento y para pedirte una oportunidad para remendar todo y poder reconstruir nuestra relación mis acciones an tenido un impacto negativo en ti y la conexión de la relación nunca fue mi intención hacerte daño lamento profundamente todo mis decisiones y emociones irresponsables afectaron nuestra relación me arrepiento sinceramente de todo.Perdonar no es olvidar es entender que seguir aferrado al dolor no cambia el pasado Ati no quiero perderte preferiría que te quedaras eres muy importante para mí corazón realmente no quiero perderte pero ahora es tu decisión tienes todo el derecho de decidir por los dos aunque duela.
+
+</div>
+
+<h2> Gracias Por Estar Aquí <3</h2>
+
+<div class="firma">
+Vale ❤️
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+🌸 Gracias por tomarte el tiempo de leer ❤️ 🌸
+
+<br><br>
+
+Perdon💔
+
+</footer>
+
+</body>
+</html>
+
+
+
